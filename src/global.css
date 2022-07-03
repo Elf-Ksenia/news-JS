@@ -6,6 +6,9 @@ body {
 
 header {
   padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
@@ -13,23 +16,71 @@ header h1 {
   font-weight: 800;
 }
 
+main {
+  max-width: 1920px;
+}
+
 footer {
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-footer .copyright {
+
+footer .copyright,
+footer .gh-link {
   font-size: 14px;
   color: #333;
   text-align: center;
 }
-footer .copyright a {
+
+footer .copyright a,
+footer .gh-link a {
+  font-size: 14px;
   color: #444;
 }
-footer .copyright a:hover {
+
+footer .copyright a:hover,
+.gh-link a:hover {
   color: #555;
 }
+
 footer .copyright:before {
   content: '©';
+}
+
+footer .rs-app-logo {
+  width: 100px;
+  height: 100px;
+}
+
+@media screen and (max-width:767px) {
+  header {
+    padding: 5px 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .copyright,
+  footer .gh-link {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  footer .copyright a,
+  footer .gh-link a {
+    font-size: 12px;
+  }
+
+  footer .rs-app-logo {
+    width: 70px;
+    height: 70px;
+  }
 }

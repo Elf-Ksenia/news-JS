@@ -3,7 +3,7 @@
   flex-wrap: nowrap;
   width: 100%;
   height: 120px;
-  overflow: auto;
+  overflow: scroll;
   align-items: center;
   font: 300 1em 'Fira Sans', sans-serif;
 }
@@ -31,4 +31,11 @@
 .source__item-name {
   font-weight: 400;
   white-space: nowrap;
+}
+
+@media screen and (max-width:767px) {
+  .sources {
+    font-size: 0.8em;
+    height: 80px;
+  }
 }
